@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Iyaaz M.S | Digital Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+  background: radial-gradient(circle at top, #0b1020, #020617 70%);
+  color: #e5e7eb;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== STARS ===== */
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: twinkle 3s infinite ease-in-out;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-logo img {
+  width: 220px;
+  max-width: 80vw;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0 25px rgba(168,85,247,0.5));
+}
+
+/* ===== TEXT ===== */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #c7d2fe;
+  margin-bottom: 25px;
+}
+
+p {
+  color: #cbd5f5;
+  margin-bottom: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 26px;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all .25s ease;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #e5e7eb;
+  color: #020617;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  text-align: left;
+}
+
+.card {
+  background: rgba(30,41,59,.85);
+  padding: 25px;
+  border-radius: 14px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #94a3b8;
+  background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<!-- STAR BACKGROUND -->
+<script>
+for (let i = 0; i < 120; i++) {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.style.top = Math.random() * 100 + "%";
+  star.style.left = Math.random() * 100 + "%";
+  star.style.animationDelay = Math.random() * 3 + "s";
+  document.body.appendChild(star);
+}
+</script>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+
+  <div class="hero-logo">
+    <img src="wolf.png" alt="Wolf Logo">
+  </div>
+
+  <h1>Iyaaz M.S</h1>
+  <h2>Engineering Student interested in Software Development</h2>
+
+  <p>
+    I enjoy learning and building software projects using HTML, CSS,
+    JavaScript, and Python, focusing on clean structure and practical solutions.
+  </p>
+
+  <a href="#projects" class="btn">View Projects</a>
+  <a href="#contact" class="btn">Contact</a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am an engineering student with a strong interest in software development.
+    I learn best by building real projects and continuously improving my skills.
+  </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2>Tech Stack</h2>
+  <div class="cards">
+    <div class="card">HTML, CSS, JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">Java (Basics)</div>
+    <div class="card">GitHub, VS Code</div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <strong>Writer’s Web</strong><br>
+      Minimal website for written content (HTML & CSS)
+    </div>
+    <div class="card">
+      <strong>Python Game</strong><br>
+      Developed using Pygame
+    </div>
+    <div class="card">
+      <strong>Responsive Web Page</strong><br>
+      Practiced layout and responsiveness
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <a class="btn"
+     href="https://github.com/iyaazms1"
+     target="_blank">
+     GitHub
+  </a>
+
+  <a class="btn"
+     href="https://www.linkedin.com/in/iyaaz-m-s-5449a7329"
+     target="_blank">
+     LinkedIn
+  </a>
+
+  <a class="btn"
+     href="https://mail.google.com/mail/?view=cm&fs=1&to=iyaazms1@gmail.com"
+     target="_blank">
+     Email Me
+  </a>
+
+  <button class="btn"
+          onclick="navigator.clipboard.writeText('iyaazms1@gmail.com')">
+    Copy Email
+  </button>
+</section>
+
+<footer>
+  © 2025 Iyaaz M.S | Digital Portfolio
+</footer>
+
+</body>
+</html>
