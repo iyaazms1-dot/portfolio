@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Iyaaz Muhammad Shabaz</title>
+  <meta name="description" content="Contact Iyaaz Muhammad Shabaz for internships, collaborations and software projects.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="page-head">
+      <h1>Let's talk</h1>
+      <p>Open to internships, research collaborations and interesting projects.</p>
+    </div>
+    <section class="section">
+      <div class="bento">
+        <div class="block span-5 violet"><h2 style="margin-bottom:18px">Find me</h2><div id="contactInfo"></div></div>
+        <div class="block span-7">
+          <form id="contactForm" novalidate>
+            <div class="field"><label for="cName">NAME</label><input id="cName" autocomplete="name" required></div>
+            <div class="field"><label for="cEmail">EMAIL</label><input id="cEmail" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="cMsg">MESSAGE</label><textarea id="cMsg" required minlength="5"></textarea></div>
+            <button class="btn" type="submit">Send message →</button>
+            <p class="form-msg" id="formMsg" role="status"></p>
+            <p class="mono muted">The form opens your email app with your message prepared. Direct website delivery can be enabled by connecting a form endpoint.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
